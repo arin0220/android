@@ -1,10 +1,12 @@
 package com.example.rollingpaper
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
+import drawable.content
 
 class MainActivity : Activity() {
     private lateinit var nameEditText: EditText // 이름을 입력하는 EditText
@@ -25,11 +27,15 @@ class MainActivity : Activity() {
             R.id.button -> {
                 // 버튼이 클릭되었을 때 EditText에서 값을 가져와서 문자열로 변환
                 val nameText = nameEditText.text.toString()
-                val menuText = menuEditText.text.toString()
+                val titleText = menuEditText.text.toString()
 
                 // 가져온 값들을 이용하여 Toast 메시지 표시
-                val message = "이름: $nameText, 메뉴: $menuText"
+                val message = "이름: $nameText, 메뉴: $titleText"
                 Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+
+                // 새로운 액티비티로 전환
+//                val intent = Intent(this, content::class.java)
+//                startActivity(intent)
             }
         }
     }

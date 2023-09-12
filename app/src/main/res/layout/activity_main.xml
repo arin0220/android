@@ -40,7 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="20px"
-            android:text="뭐 축하함? 뭐 적어야하나"
+            android:text="제목"
             android:textSize="20sp"
             android:textStyle="bold" />
 <!--            tools:layout_editor_absoluteX="50dp"-->
@@ -48,7 +48,7 @@
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:layout_marginVertical="20px"
             android:id="@+id/menu"
             android:hint="입력하세요"/>
