@@ -1,4 +1,5 @@
 package com.example.rollingpaper
+// 패키지 옮김
 
 import android.os.Bundle
 import android.view.View

@@ -36,6 +36,7 @@ class MainActivity : Activity() {
 //                 새로운 액티비티로 전환
                 val intent = Intent(this, Content::class.java)
                 startActivity(intent)
+                //전환완료
             }
         }
     }
