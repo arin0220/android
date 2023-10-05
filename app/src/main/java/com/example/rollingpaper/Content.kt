@@ -1,4 +1,4 @@
-package drawable
+package com.example.rollingpaper
 
 import android.os.Bundle
 import android.view.View
@@ -7,7 +7,7 @@ import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import com.example.rollingpaper.R
 
-class content : AppCompatActivity() {
+class Content : AppCompatActivity() {
 //    override fun onCreate(savedInstanceState: Bundle?) {
 //        super.onCreate(savedInstanceState)
 //        setContentView(R.layout.content) // 새로운 액티비티의 레이아웃 파일을 설정

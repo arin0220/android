@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
-import drawable.content
+
 
 class MainActivity : Activity() {
     private lateinit var nameEditText: EditText // 이름을 입력하는 EditText
@@ -33,9 +33,9 @@ class MainActivity : Activity() {
                 val message = "이름: $nameText, 메뉴: $titleText"
                 Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
 
-                // 새로운 액티비티로 전환
-//                val intent = Intent(this, content::class.java)
-//                startActivity(intent)
+//                 새로운 액티비티로 전환
+                val intent = Intent(this, Content::class.java)
+                startActivity(intent)
             }
         }
     }
