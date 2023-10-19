@@ -11,6 +11,7 @@ import android.widget.Toast
 class MainActivity : Activity() {
     private lateinit var nameEditText: EditText // 이름을 입력하는 EditText
     private lateinit var menuEditText: EditText // 메뉴를 입력하는 EditText
+    private lateinit var numEditText: EditText // 인원수를 입력하는 EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,24 +20,27 @@ class MainActivity : Activity() {
         // EditText 위젯을 findViewById를 사용하여 연결
         nameEditText = findViewById(R.id.name)
         menuEditText = findViewById(R.id.menu)
+        numEditText = findViewById(R.id.num_people)
+
     }
 
     // 버튼 클릭 이벤트 핸들러 메서드
     fun onButtonClick(view: View) {
         when (view.id) {
             R.id.button -> {
-                // 버튼이 클릭되었을 때 EditText에서 값을 가져와서 문자열로 변환
                 val nameText = nameEditText.text.toString()
                 val titleText = menuEditText.text.toString()
 
-                // 가져온 값들을 이용하여 Toast 메시지 표시
-                val message = "이름: $nameText, 메뉴: $titleText"
+                // UserData 객체를 생성하여 데이터 저장
+                val userData = UserData(nameText, titleText)
+
+                // 가져온 데이터를 사용
+                val message = "이름: ${userData.name}, 메뉴: ${userData.menu}"
                 Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
 
-//                 새로운 액티비티로 전환
+                // 새로운 액티비티로 전환
                 val intent = Intent(this, Content::class.java)
                 startActivity(intent)
-                //전환완료
             }
         }
     }
