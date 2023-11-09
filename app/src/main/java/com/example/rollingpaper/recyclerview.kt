@@ -12,8 +12,8 @@ class RecyclerViewActivity : AppCompatActivity() { // AppCompatActivity를 상�
     private lateinit var adapter: MyRecyclerViewAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.recyclerview)
+            super.onCreate(savedInstanceState)
+            setContentView(R.layout.recyclerview)
 
         val buttonAdd = findViewById<Button>(R.id.button2)
         val buttonRemove = findViewById<Button>(R.id.button)
